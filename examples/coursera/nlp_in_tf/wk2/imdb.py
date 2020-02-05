@@ -105,5 +105,6 @@ if __name__ == '__main__':
     training_sequences, testing_sequences = preprocessing(training_sentences, testing_sentences)
     model = make_model()
     model, history = train_model(model, training_sequences, training_labels_final, testing_sequences, testing_labels_final)
+    model.save('imdb_sentiment.h5')
 
     
